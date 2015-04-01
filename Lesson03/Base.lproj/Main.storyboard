@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G0q-Oc-BQG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="G0q-Oc-BQG">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -32,19 +32,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Di-GNm">
-                                <rect key="frame" x="154" y="187" width="293.5" height="154"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right to meet Lucy. 🐾 ➡️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMl-Di-GNm">
+                                <rect key="frame" x="153" y="187" width="294" height="154"/>
+                                <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="293.5" id="pEs-UT-NKI"/>
                                     <constraint firstAttribute="height" constant="154" id="z5Q-zy-Nta"/>
                                 </constraints>
-                                <string key="text">TODO: When this is swiped horizontally,
-a modal should appear.
-It needs to have an image view and a dismiss button that dismisses the modal. Do this in code.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="fb5-f7-lJv" appends="YES" id="EAz-jV-9iM"/>
+                                    <outletCollection property="gestureRecognizers" destination="fb5-f7-lJv" appends="YES" id="ChC-uc-pN6"/>
+                                </connections>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AG3-bY-Vru">
                                 <rect key="frame" x="236" y="382" width="128" height="30"/>
@@ -52,27 +54,49 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                                     <constraint firstAttribute="width" constant="128" id="DB9-Jg-gkA"/>
                                     <constraint firstAttribute="height" constant="30" id="dwV-ga-14C"/>
                                 </constraints>
-                                <state key="normal" title="Display Table View">
+                                <state key="normal" title="Find Local Dogs">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dog Tinder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wf-m3-Z5r">
+                                <rect key="frame" x="153" y="112" width="294" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="AG3-bY-Vru" secondAttribute="centerX" id="0zs-lK-Y2n"/>
+                            <constraint firstItem="4Wf-m3-Z5r" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="48" id="6wQ-Mq-U8e"/>
                             <constraint firstAttribute="centerY" secondItem="AG3-bY-Vru" secondAttribute="centerY" constant="-97" id="RgT-FV-BaV"/>
                             <constraint firstAttribute="centerX" secondItem="NMl-Di-GNm" secondAttribute="centerX" id="daB-TD-fOi"/>
+                            <constraint firstItem="4Wf-m3-Z5r" firstAttribute="width" secondItem="NMl-Di-GNm" secondAttribute="width" id="hfm-7j-pxH"/>
                             <constraint firstAttribute="centerY" secondItem="NMl-Di-GNm" secondAttribute="centerY" constant="36" id="lkv-nx-NKf"/>
+                            <constraint firstAttribute="centerX" secondItem="4Wf-m3-Z5r" secondAttribute="centerX" id="oRc-uj-b0r"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fb5-f7-lJv" appends="YES" id="z6C-it-5Gp"/>
+                            <outletCollection property="gestureRecognizers" destination="fb5-f7-lJv" appends="YES" id="UbE-L9-Jna"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="hzY-Hy-RMA"/>
                     <connections>
+                        <outlet property="swipeAreaLabel" destination="NMl-Di-GNm" id="eB6-ig-72M"/>
+                        <outlet property="swipePad" destination="NMl-Di-GNm" id="RQU-gU-SuW"/>
+                        <outlet property="titleLabel" destination="4Wf-m3-Z5r" id="Z1r-pq-BCk"/>
+                        <outlet property="tvButton" destination="AG3-bY-Vru" id="1MY-cQ-uqY"/>
                         <segue destination="tH5-nV-9zA" kind="show" identifier="show" id="O1F-Kb-DN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fb5-f7-lJv">
+                    <connections>
+                        <action selector="showModalDialogue:" destination="vXZ-lx-hvc" id="e0v-Uw-wnC"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="282.75" y="407"/>
+            <point key="canvasLocation" x="401" y="407"/>
         </scene>
         <!--Array Table View Controller-->
         <scene sceneID="hS5-QX-ITe">
@@ -90,7 +114,7 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuN-we-tcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="407"/>
+            <point key="canvasLocation" x="1146" y="343"/>
         </scene>
     </scenes>
 </document>
