@@ -24,8 +24,7 @@ class ViewController: UIViewController {
     
    
     @IBAction func presentModalViewController(sender: UISwipeGestureRecognizer!) {
-        
-        println("function called")
+    
         let mDC = ModalDialogController()
         mDC.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
         mDC.viewController = self
